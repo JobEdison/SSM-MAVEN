@@ -24,16 +24,10 @@ import sy.service.StuService;
 @ContextConfiguration(locations = { "classpath:spring.xml", "classpath:spring-mybatis.xml" })
 public class mytest1 {
     private static final Logger logger = Logger.getLogger(mytest1.class);
-
+@Autowired
  private StuService stuService;
- public StuService getStuService() {
-     return stuService;
- }
 
- @Autowired
- public void setStuService(StuService stuService) {
-     this.stuService = stuService;
- }
+
     @Test
  public void test()  {
     Stu stu=stuService.selectByAge(6);

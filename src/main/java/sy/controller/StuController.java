@@ -22,16 +22,12 @@ import sy.service.StuService;
 @Controller
 @RequestMapping("/stuController")
 public class StuController {
-    private StuService stuService;
+   
     
-    public StuService getStuService() {
-        return stuService;
-    }
     @Autowired
-    public void setStuService(StuService stuService) {
-        this.stuService = stuService;
-    }
-
+   
+     private StuService stuService;
+    
     @RequestMapping("/getName")
     public String getName(int age,HttpServletRequest request) {
        Stu stu= stuService.selectByAge(age);

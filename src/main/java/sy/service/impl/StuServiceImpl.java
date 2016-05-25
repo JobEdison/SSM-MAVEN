@@ -23,16 +23,11 @@ public class StuServiceImpl implements StuService{
     /** 
      * @see sy.service.StuService#selectByAge(int)
      */
-   
+   @Autowired
     private StuDao stuDao;
-    public StuDao getStuDao() {
-        return stuDao;
-    }
-
-    @Autowired
-    public void setStuDao(StuDao stuDao) {
-        this.stuDao = stuDao;
-    }
+   
+    
+    
     @Override
     public Stu selectByAge(int age) {
         // TODO Auto-generated method stub
