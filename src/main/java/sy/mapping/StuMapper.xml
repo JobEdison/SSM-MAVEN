@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="sy.dao.StuDao" >
+  <resultMap id="BaseResultMap" type="sy.model.Stu" >
+    <result column="AGE" property="age" jdbcType="INTEGER" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+  </resultMap>
+ 
+  <sql id="Base_Column_List" >
+   
+    AGE, NAME
+  </sql>
+  
+  
+  <select id="selectByAge" parameterType="int" resultType="sy.model.Stu" >
+   
+		select *from stu where AGE=#{age}
+    
+  </select>
+</mapper>
+
+
